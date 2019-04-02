@@ -1,6 +1,6 @@
 package main.entities;
 
-import main.Game;
+import main.GameEngine;
 import main.resources.ResourceLoader;
 
 public class Projectile extends Entity {
@@ -47,13 +47,15 @@ public class Projectile extends Entity {
 			}
 		} else if (type == 1) {
 			boolean temp = true;
-			if ((getY() >= Game.player.getY() + Game.player.getTexture().getHeight() - 1) || (getY() + getTexture().getHeight() - 1 <= Game.player.getY()))
+			if ((getY() >= GameEngine.player.getY() + GameEngine.player.getTexture().getHeight() - 1)
+					|| (getY() + getTexture().getHeight() - 1 <= GameEngine.player.getY()))
 				temp = false;
-			else if ((getX() + getTexture().getWidth() - 1 <= Game.player.getX()) || (getX() >= Game.player.getX() + Game.player.getTexture().getWidth() - 1))
+			else if ((getX() + getTexture().getWidth() - 1 <= GameEngine.player.getX())
+					|| (getX() >= GameEngine.player.getX() + GameEngine.player.getTexture().getWidth() - 1))
 				temp = false;
 			if (temp) {
 				range = -1;
-				Game.player.setHp(Game.player.getHp() - damage);
+				GameEngine.player.setHp(GameEngine.player.getHp() - damage);
 			}
 
 		}

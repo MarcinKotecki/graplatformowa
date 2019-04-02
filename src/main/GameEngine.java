@@ -3,8 +3,11 @@ package main;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 
+import main.display.Hud;
 import main.graphics.Display;
 import main.resources.*;
+import main.input.KeyManager;
+import main.entities.*;
 
 public class GameEngine implements Runnable {
 
@@ -17,9 +20,11 @@ public class GameEngine implements Runnable {
     private Graphics g;
 
     public static int width, height, scale;
+    public static KeyManager km;
 
     public static Level currentLevel;
     public static GameMap currentMap;
+    public static Player player;
 
     public GameEngine(int w, int h, int s) {
         width = w;
@@ -29,15 +34,23 @@ public class GameEngine implements Runnable {
 
     private void init() {
         display = new Display(width, height);
+        km = new KeyManager();
+        display.getFrame().addKeyListener(km);
         Tiles.init();
         GameMaps.init();
         Levels.init();
-
+        player = new Player();
+        Creatures.init();
+        Projectiles.init();
         Levels.changeLevel(0);
     }
 
     private void update() {
+        km.update();
         currentMap.update();
+        player.update();
+        Creatures.update();
+        Projectiles.update();
     }
 
     private void render() {
@@ -51,6 +64,10 @@ public class GameEngine implements Runnable {
         // draw here
 
         currentMap.draw(g);
+        player.draw(g);
+        Creatures.draw(g);
+        Projectiles.draw(g);
+        Hud.drawHUD(g);
 
         // draw here
         bs.show();

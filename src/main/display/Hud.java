@@ -1,22 +1,23 @@
 package main.display;
 
-import main.Game;
+import main.GameEngine;
 
 import java.awt.*;
 
 public class Hud {
 
-	public static Font HUDfont = new Font("Consolas", Font.BOLD, 8 * Game.scale);
+	public static Font HUDfont = new Font("Consolas", Font.BOLD, 8 * GameEngine.scale);
 
 	public static void drawHUD(Graphics g) {
 		g.setColor(new Color(255, 255, 255));
-		g.fillRect(8, 8, 64 * Game.scale, 8 * Game.scale);
+		g.fillRect(8, 8, 64 * GameEngine.scale, 8 * GameEngine.scale);
 		g.setColor(new Color(255, 0, 0));
-		g.drawRect(8, 8, 64 * Game.scale, 8 * Game.scale);
-		g.fillRect(8, 8, Game.player.getHp() * 64 / Game.player.getMaxHp() * Game.scale, 8 * Game.scale);
+		g.drawRect(8, 8, 64 * GameEngine.scale, 8 * GameEngine.scale);
+		g.fillRect(8, 8, GameEngine.player.getHp() * 64 / GameEngine.player.getMaxHp() * GameEngine.scale
+				, 8 * GameEngine.scale);
 		g.setColor(new Color(0, 0, 0));
 		g.setFont(HUDfont);
-		g.drawString("HP " + Game.player.getHp() + "/" + Game.player.getMaxHp(), 11, 5 + 8 * Game.scale);
+		g.drawString("HP " + GameEngine.player.getHp() + "/" + GameEngine.player.getMaxHp(), 11, 5 + 8 * GameEngine.scale);
 	}
 
 }

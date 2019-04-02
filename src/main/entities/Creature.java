@@ -1,6 +1,6 @@
 package main.entities;
 
-import main.Game;
+import main.GameEngine;
 import main.resources.ResourceLoader;
 
 public class Creature extends Entity {
@@ -43,11 +43,15 @@ public class Creature extends Entity {
 	}
 
 	void update() {
-		if (!Game.currentMap.getTileByXY(Math.floor(getX()), Math.floor(getY()) + getTexture().getHeight()).isSolid() && !Game.currentMap.getTileByXY(Math.floor(getX()) - 1 + getTexture().getWidth(), Math.floor(getY()) + getTexture().getHeight()).isSolid()) {
+		if (!GameEngine.currentMap.getTileByXY(Math.floor(getX()), Math.floor(getY()) + getTexture().getHeight()).isSolid()
+				&& !GameEngine.currentMap.getTileByXY(Math.floor(getX()) - 1 + getTexture().getWidth()
+				, Math.floor(getY()) + getTexture().getHeight()).isSolid()) {
 			if (vy < 3)
 				vy += 0.2;
 		}
-		if (Game.currentMap.getTileByXY(Math.floor(getX()), Math.floor(getY()) + getTexture().getHeight()).isSolid() || Game.currentMap.getTileByXY(Math.floor(getX()) - 1 + getTexture().getWidth(), Math.floor(getY()) + getTexture().getHeight()).isSolid()) {
+		if (GameEngine.currentMap.getTileByXY(Math.floor(getX()), Math.floor(getY()) + getTexture().getHeight()).isSolid()
+				|| GameEngine.currentMap.getTileByXY(Math.floor(getX()) - 1 + getTexture().getWidth()
+				, Math.floor(getY()) + getTexture().getHeight()).isSolid()) {
 			vy = 0;
 		}
 		if (getX() > x2) {
@@ -57,14 +61,14 @@ public class Creature extends Entity {
 		}
 		setX(getX() + vx);
 		setY(getY() + vy);
-		if (shootingTimer <= 0 && getX() + Game.player.getTexture().getWidth() - Game.player.getX() <= range) {
+		if (shootingTimer <= 0 && getX() + GameEngine.player.getTexture().getWidth() - GameEngine.player.getX() <= range) {
 			shootingTimer += shootingCooldown;
-			double yy = Game.player.getY() + Game.player.getTexture().getHeight() / 2 - Projectiles.getProjectileFromList(projectileId).getTexture().getHeight() / 2;
+			double yy = GameEngine.player.getY() + GameEngine.player.getTexture().getHeight() / 2 - Projectiles.getProjectileFromList(projectileId).getTexture().getHeight() / 2;
 			if (yy > getY() + getTexture().getHeight() - 1 - (1 + Projectiles.getProjectileFromList(projectileId).getTexture().getHeight()) / 2)
 				yy = getY() + getTexture().getHeight() - 1 - (1 + Projectiles.getProjectileFromList(projectileId).getTexture().getHeight()) / 2;
 			else if( yy < getY())
 				yy = getY();
-			if (Game.player.getX() < this.getX()) {
+			if (GameEngine.player.getX() < this.getX()) {
 				Projectiles.newProjectile(projectileId, range, -1, getX() + (getTexture().getWidth() >> 1), yy);
 			} else {
 				Projectiles.newProjectile(projectileId, range, 1, getX() + (getTexture().getWidth() >> 1), yy);

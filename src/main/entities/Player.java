@@ -11,9 +11,9 @@ public class Player extends Entity {
     private int hp, maxHp;
 
     public Player() {
-        this.maxHp = 1000;
+        this.maxHp = 100;
         this.hp = maxHp;
-        this.range = 200;
+        this.range = 250;
         setX(0);
         setY(0);
         setTexture(ResourceLoader.loadImage("/textures/mage.png"));
@@ -86,7 +86,7 @@ public class Player extends Entity {
         return hp;
     }
 
-    public void setHp(int hp) {
+    void setHp(int hp) {
         this.hp = hp;
         System.out.println("Player's hp = " + hp);
     }

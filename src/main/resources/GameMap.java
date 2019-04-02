@@ -38,7 +38,16 @@ public class GameMap {
     }
 
     public void update() {
-
+        if ((GameEngine.player.getX() - offsetX > GameEngine.width * 0.35) && (offsetX < maxoffsetX))
+            if (GameEngine.player.getX() - offsetX > GameEngine.width * 0.5)
+                offsetX += 2;
+            else
+                offsetX += 1;
+        if ((GameEngine.player.getX() - offsetX < GameEngine.width * 0.3) && (offsetX > 0))
+            if (GameEngine.player.getX() - offsetX < GameEngine.width * 0.15)
+                offsetX -= 2;
+            else
+                offsetX -= 1;
     }
 
     public void draw(Graphics g) {
@@ -71,15 +80,15 @@ public class GameMap {
         return offsetX;
     }
 
-    public void setOffSetX(int i) {
+    void setOffSetX(int i) {
         offsetX = i;
     }
 
-    public int getPlayerX() {
+    int getPlayerX() {
         return playerX;
     }
 
-    public int getPlayerY() {
+    int getPlayerY() {
         return playerY;
     }
 

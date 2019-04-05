@@ -42,6 +42,7 @@ public class GameEngine implements Runnable {
         player = new Player();
         Creatures.init();
         Projectiles.init();
+        Hud.init(display);
         Levels.changeLevel(0);
     }
 
@@ -56,7 +57,7 @@ public class GameEngine implements Runnable {
     private void render() {
         bs = display.getCanvas().getBufferStrategy();
         if (bs == null) {
-            display.getCanvas().createBufferStrategy(3);
+            display.getCanvas().createBufferStrategy(2);
             return;
         }
         g = bs.getDrawGraphics();
@@ -81,7 +82,7 @@ public class GameEngine implements Runnable {
         long diff;
         while (running) {
             try {
-                Thread.sleep(1);
+                Thread.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

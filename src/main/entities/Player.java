@@ -7,11 +7,14 @@ import main.resources.ResourceLoader;
 public class Player extends Entity {
 
     private double vx, vy, range;
-    private int shootingCooldown = 60; //TICKS
-    private int hp, maxHp;
+    private int shootingCooldown = 20; //TICKS
+    private int hp, maxHp, maxMana;
+    private double mana;
 
     public Player() {
         this.maxHp = 100;
+        this.maxMana = 100;
+        this.mana = maxMana;
         this.hp = maxHp;
         this.range = 250;
         setX(0);
@@ -64,12 +67,14 @@ public class Player extends Entity {
         setY(getY() + vy);
 
         //shooting
-        if (shootingCooldown <= 0) {
+        if ((shootingCooldown <= 0) && (mana >= 25)) {
             if (GameEngine.km.shootRight) {
-                shootingCooldown += 60;
+                shootingCooldown += 20;
+                mana -= 25;
                 Projectiles.newProjectile(0, range, 1, getX() + (getTexture().getWidth() >> 1), getY() + (getTexture().getHeight() >> 1));
             } else if (GameEngine.km.shootLeft) {
-                shootingCooldown += 60;
+                shootingCooldown += 20;
+                mana -= 25;
                 Projectiles.newProjectile(0, range, -1, getX() + (getTexture().getWidth() >> 1), getY() + (getTexture().getHeight() >> 1));
             }
         }
@@ -80,6 +85,10 @@ public class Player extends Entity {
         if (hp <= 0) {
             Levels.changeLevel(GameEngine.currentLevel.getId());
         }
+
+        //manaRegen
+        if (mana < maxMana)
+            mana += 0.25;
     }
 
     public int getHp() {
@@ -93,6 +102,14 @@ public class Player extends Entity {
 
     public int getMaxHp() {
         return maxHp;
+    }
+
+    public double getMana() {
+        return mana;
+    }
+
+    public int getMaxMana() {
+        return maxMana;
     }
 }
 

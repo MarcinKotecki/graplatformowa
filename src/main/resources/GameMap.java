@@ -53,7 +53,9 @@ public class GameMap {
     public void draw(Graphics g) {
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++)
-                g.drawImage(tiles[x][y].getTexture(), ((x * 16) - offsetX) * GameEngine.scale, ((y * 16) * GameEngine.scale), 16 * GameEngine.scale, 16 * GameEngine.scale, null);
+                //nie widać? nie rysuj
+                if ((((x * 16) - offsetX) >= -16) && ((x * 16) - offsetX) + 16 < (GameEngine.width) + 16)
+                    g.drawImage(tiles[x][y].getTexture(), ((x * 16) - offsetX) * GameEngine.scale, ((y * 16) * GameEngine.scale), 16 * GameEngine.scale, 16 * GameEngine.scale, null);
     }
 
     public Tile getTileByXY(double x, double y) {

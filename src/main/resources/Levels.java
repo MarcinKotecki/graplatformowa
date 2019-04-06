@@ -1,10 +1,7 @@
 package main.resources;
 
 import main.GameEngine;
-import main.entities.Creature;
-import main.entities.Creatures;
-import main.entities.Projectile;
-import main.entities.Projectiles;
+import main.entities.*;
 
 import java.util.ArrayList;
 
@@ -15,6 +12,7 @@ public class Levels {
     public static void init() {
         levels = new ArrayList<>();
         levels.add(new Level(0, "/levels/level0"));
+        levels.add(new Level(1, "/levels/level1"));
     }
 
     private static Level getLevel(int id) {
@@ -36,7 +34,7 @@ public class Levels {
         GameEngine.currentMap = GameMaps.getMap(GameEngine.currentLevel.getMapId());
         assert GameEngine.currentMap != null;
         GameEngine.currentMap.setOffSetX(0);
-        Creatures.spawn(GameEngine.currentLevel.getCreaturesId());
+        Creatures.spawn(GameEngine.currentLevel.getCreatures());
         GameEngine.player.reset(GameEngine.currentMap.getPlayerX(), GameEngine.currentMap.getPlayerY());
     }
 

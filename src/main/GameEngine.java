@@ -43,6 +43,7 @@ public class GameEngine implements Runnable {
         Creatures.init();
         Projectiles.init();
         Hud.init(display);
+        Portals.init();
         Levels.changeLevel(0);
     }
 
@@ -52,6 +53,7 @@ public class GameEngine implements Runnable {
         player.update();
         Creatures.update();
         Projectiles.update();
+        Portals.update();
     }
 
     private void render() {
@@ -68,6 +70,7 @@ public class GameEngine implements Runnable {
         player.draw(g);
         Creatures.draw(g);
         Projectiles.draw(g);
+        Portals.draw(g);
         Hud.drawHUD(g);
 
         // draw here

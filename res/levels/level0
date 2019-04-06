@@ -1,4 +1,5 @@
 name First
 map 0
-creature 0
-creature 1
+creature 0 192 272 50
+creature 0 288 368 50
+creature 1 480 576 50

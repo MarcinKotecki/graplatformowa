@@ -9,13 +9,13 @@ public class Level {
     private int id;
     private String name;
     private int mapId;
-    private ArrayList<Integer> creaturesId;
+    private ArrayList<int[]> creatures;
     private String path;
 
     Level(int id, String path) {
         this.id = id;
         this.path = path;
-        creaturesId = new ArrayList<>();
+        creatures = new ArrayList<>();
         load();
     }
 
@@ -28,8 +28,14 @@ public class Level {
                     this.name = in.next();
                 else if (s.equals("map"))
                     mapId = in.nextInt();
-                else if (s.equals("creature"))
-                    creaturesId.add(in.nextInt());
+                else if (s.equals("creature")) {
+                    int[] t = new int[4];
+                    t[0] = in.nextInt();
+                    t[1] = in.nextInt();
+                    t[2] = in.nextInt();
+                    t[3] = in.nextInt();
+                    creatures.add(t);
+                }
                 s = in.next();
             }
         } catch (NoSuchElementException e) {
@@ -41,8 +47,8 @@ public class Level {
         return id;
     }
 
-    public ArrayList<Integer> getCreaturesId() {
-        return creaturesId;
+    public ArrayList<int[]> getCreatures() {
+        return creatures;
     }
 
     public int getMapId() {

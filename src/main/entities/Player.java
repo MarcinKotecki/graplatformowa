@@ -12,7 +12,7 @@ public class Player extends Entity {
     private double mana;
 
     public Player() {
-        this.maxHp = 100;
+        this.maxHp = 1000;
         this.maxMana = 100;
         this.mana = maxMana;
         this.hp = maxHp;

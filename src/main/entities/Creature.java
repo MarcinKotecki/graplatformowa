@@ -14,34 +14,50 @@ public class Creature extends Entity {
     private int shootingCooldown;
     private int shootingTimer;
     private int range;
+    private int portalId;
 
-    Creature(int id, int hp, double x1, double x2, double y, double vx, int range, int projectileId, int shootingCooldown, String path) {
+    Creature(int id, int hp, double vx, int range, int projectileId, int shootingCooldown, String path) {
         this.id = id;
-        this.x1 = x1;
-        this.x2 = x2;
         this.vx = vx;
         this.hp = hp;
         this.range = range;
         this.projectileId = projectileId;
         this.shootingCooldown = shootingCooldown;
         setX(x1);
-        setY(y);
         setTexture(ResourceLoader.loadImage(path));
+        this.portalId = -111;
     }
 
-    Creature(int id) {
-        this.id = Creatures.getCreatureFromList(id).getId();
-        this.x1 = Creatures.getCreatureFromList(id).getX1();
-        this.x2 = Creatures.getCreatureFromList(id).getX2();
+    Creature(int id, int hp, double vx, int range, int projectileId, int shootingCooldown, String path, int portalId) {
+        this.id = id;
+        this.vx = vx;
+        this.hp = hp;
+        this.range = range;
+        this.projectileId = projectileId;
+        this.shootingCooldown = shootingCooldown;
+        setX(x1);
+        setTexture(ResourceLoader.loadImage(path));
+        this.portalId = portalId;
+    }
+
+    Creature(int t[]) {
+        this.id = t[0];
+        this.x1 = t[1];
+        this.x2 = t[2];
         this.vx = Creatures.getCreatureFromList(id).getVx();
         this.hp = Creatures.getCreatureFromList(id).getHp();
         this.range = Creatures.getCreatureFromList(id).getRange();
         this.projectileId = Creatures.getCreatureFromList(id).getProjectileId();
         this.shootingCooldown = Creatures.getCreatureFromList(id).getShootingCooldown();
         this.shootingTimer = shootingCooldown;
-        setX(Creatures.getCreatureFromList(id).getX());
-        setY(Creatures.getCreatureFromList(id).getY());
+        this.portalId = Creatures.getCreatureFromList(id).getPortalId();
+        setX(t[1]);
+        setY(t[3]);
         setTexture(Creatures.getCreatureFromList(id).getTexture());
+    }
+
+    private int getPortalId() {
+        return portalId;
     }
 
     void update() {
@@ -78,8 +94,11 @@ public class Creature extends Entity {
         }
         if (shootingTimer > 0)
             shootingTimer--;
-        if (hp <= 0)
+        if (hp <= 0) {
+            if( portalId >= 0)
+                Portals.spawn(portalId);
             Creatures.removeCreature(this);
+        }
     }
 
     int getId() {

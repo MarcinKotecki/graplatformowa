@@ -1,5 +1,10 @@
 name First
 map 0
 creature 0 192 272 50
-creature 0 288 368 50
-creature 1 480 576 50
+creature 0 384 384 50
+creature 1 576 576 50
+creature 2 104 104 150
+creature 2 120 120 150
+creature 2 136 136 150
+creature 2 152 152 150
+creature 2 168 168 150

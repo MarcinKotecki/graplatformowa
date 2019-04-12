@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class Hud {
 
-    public static Font HUDfont = new Font("Consolas", Font.BOLD, 8 * GameEngine.scale);
+    public static Font HUDfont = new Font("Monospace", Font.BOLD, 8 * GameEngine.scale);
     private static String s;
     private static int[] x, y, w, h;
     private static Color[] c;
@@ -63,7 +63,7 @@ public class Hud {
         g.setColor(c[3]);
         g.fillRect(x[4], y[4], w[4] * (int) GameEngine.player.getMana() / GameEngine.player.getMaxMana(), h[4]);
         g.setColor(c[2]);
-        s = (int) GameEngine.player.getMana() + "/" + GameEngine.player.getMaxMana();
+        s = ((int) GameEngine.player.getMana() + "") + "/" + GameEngine.player.getMaxMana();
         g.setColor(c[2]);
         g.drawString(s, x[5], y[5]);
     }

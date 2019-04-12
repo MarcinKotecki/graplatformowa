@@ -15,6 +15,7 @@ public class Creatures {
         creaturesToRemove = new ArrayList<>();
         creaturesList.add(new Creature(0, 100, 0.8, 250, 1, 120, "/textures/enemy1.png"));
         creaturesList.add(new Creature(1, 500, 0, 400, 1, 60, "/textures/boss1.png", 0));
+        creaturesList.add(new Creature(2, 9999999, 0, 12, 2, 1, "/textures/spikes.png"));
     }
 
     public static void update() {

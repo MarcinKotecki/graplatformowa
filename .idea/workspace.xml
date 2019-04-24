@@ -9,28 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/entities/Portal.java" line="18" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy">
-      <change afterPath="$PROJECT_DIR$/src/main/Drawing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/levels/level0" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/levels/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/GameEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Creatures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Creatures.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Portals.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Portals.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Projectiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/entities/Projectiles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/resources/GameMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/resources/GameMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/maps/map0" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/maps/map0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/levels/level0" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/map0" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/map0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/map1" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/map1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Creatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Creatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Portals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Portals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Projectiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Projectiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GameMap.java" afterDir="false" />
-    </list>
+    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +250,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556102800926" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556102836869" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../GraPlatformowa-master" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -344,21 +323,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="742" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17749244" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17749244" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.22647528" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.22647528" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.34290272" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.34290272" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />

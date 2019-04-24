@@ -1,6 +1,7 @@
 package main.entities;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Portals {
@@ -22,9 +23,9 @@ public class Portals {
         portals.removeAll(portalsToRemove);
     }
 
-    public static void draw(Graphics g) {
+    public static void draw(BufferedImage frameImg) {
         for (Portal portal  : portals)
-            portal.draw(g);
+            portal.draw(frameImg);
     }
 
     public static void remove(Portal p) {

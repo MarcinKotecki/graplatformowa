@@ -13,7 +13,7 @@ public class Player extends Entity {
 
     public Player() {
         this.maxHp = 1000;
-        this.maxMana = 100;
+        this.maxMana = 200;
         this.mana = maxMana;
         this.hp = maxHp;
         this.range = 250;

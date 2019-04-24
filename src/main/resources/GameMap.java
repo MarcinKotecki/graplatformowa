@@ -1,8 +1,10 @@
 package main.resources;
 
+import main.Drawing;
 import main.GameEngine;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.Scanner;
 
 public class GameMap {
@@ -50,12 +52,12 @@ public class GameMap {
                 offsetX -= 1;
     }
 
-    public void draw(Graphics g) {
+    public void draw(BufferedImage frameImg) {
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++)
                 //nie widać? nie rysuj
                 if ((((x * 16) - offsetX) >= -16) && ((x * 16) - offsetX) + 16 < (GameEngine.width) + 16)
-                    g.drawImage(tiles[x][y].getTexture(), ((x * 16) - offsetX) * GameEngine.scale, ((y * 16) * GameEngine.scale), 16 * GameEngine.scale, 16 * GameEngine.scale, null);
+                    Drawing.drawImage(tiles[x][y].getTexture(), frameImg, x * 16 - offsetX, y * 16);
     }
 
     public Tile getTileByXY(double x, double y) {

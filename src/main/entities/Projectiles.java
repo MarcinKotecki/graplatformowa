@@ -1,6 +1,7 @@
 package main.entities;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Projectiles {
@@ -24,9 +25,9 @@ public class Projectiles {
         projectiles.removeAll(projectilesToRemove);
     }
 
-    public static void draw(Graphics g) {
+    public static void draw(BufferedImage frameImg) {
         for (Projectile projectile : projectiles)
-            projectile.draw(g);
+            projectile.draw(frameImg);
     }
 
     public static void removeProjectile(Projectile p) {

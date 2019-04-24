@@ -1,6 +1,7 @@
 package main.entities;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Creatures {
@@ -24,9 +25,9 @@ public class Creatures {
         creatures.removeAll(creaturesToRemove);
     }
 
-    public static void draw(Graphics g) {
+    public static void draw(BufferedImage frameImg) {
         for (Creature creature : creatures)
-            creature.draw(g);
+            creature.draw(frameImg);
     }
 
     public static void removeCreature(Creature c) {

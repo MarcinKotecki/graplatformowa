@@ -1,5 +1,6 @@
 package main.entities;
 
+import main.Drawing;
 import main.GameEngine;
 
 import java.awt.*;
@@ -10,10 +11,8 @@ public class Entity {
     private BufferedImage texture;
     private double x, y;
 
-    public void draw(Graphics g) {
-        g.drawImage(texture, ((int) x - GameEngine.currentMap.getOffsetX()) * GameEngine.scale
-                , ((int) y) * GameEngine.scale, texture.getWidth() * GameEngine.scale
-                , texture.getHeight() * GameEngine.scale, null);
+    public void draw(BufferedImage frameImg) {
+        Drawing.drawImage(texture, frameImg, (int) x - GameEngine.currentMap.getOffsetX(), (int) y);
     }
 
     // 0 - góra, 1 - prawo, 2 - dół, 3 - lewo

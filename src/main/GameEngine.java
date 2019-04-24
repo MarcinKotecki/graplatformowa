@@ -2,6 +2,7 @@ package main;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 import main.display.Hud;
 import main.graphics.Display;
@@ -18,6 +19,7 @@ public class GameEngine implements Runnable {
     private Display display;
     private BufferStrategy bs;
     private Graphics g;
+    private BufferedImage frameImg;
 
     public static int width, height, scale;
     public static KeyManager km;
@@ -45,6 +47,7 @@ public class GameEngine implements Runnable {
         Hud.init(display);
         Portals.init();
         Levels.changeLevel(0);
+        frameImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     }
 
     private void update() {
@@ -66,11 +69,12 @@ public class GameEngine implements Runnable {
         g.clearRect(0, 0, width * scale, height * scale);
         // draw here
 
-        currentMap.draw(g);
-        player.draw(g);
-        Creatures.draw(g);
-        Projectiles.draw(g);
-        Portals.draw(g);
+        currentMap.draw(frameImg);
+        player.draw(frameImg);
+        Creatures.draw(frameImg);
+        Projectiles.draw(frameImg);
+        Portals.draw(frameImg);
+        g.drawImage(frameImg, 0, 0, GameEngine.width * GameEngine.scale, GameEngine.height * GameEngine.scale, null);
         Hud.drawHUD(g);
 
         // draw here

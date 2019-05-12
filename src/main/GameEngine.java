@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 
-import main.display.Hud;
+import main.graphics.Hud;
 import main.graphics.Display;
 import main.resources.*;
 import main.input.KeyManager;
@@ -13,6 +13,7 @@ import main.entities.*;
 public class GameEngine implements Runnable {
 
     private boolean running = false;
+    private boolean paused = true;
     private Thread thread;
     private int FPS = 60;
     private final double TIMEPERTICK = 1000000000 / FPS;
@@ -35,7 +36,7 @@ public class GameEngine implements Runnable {
     }
 
     private void init() {
-        display = new Display(width, height);
+        display = new Display(width, height, this);
         km = new KeyManager();
         display.getFrame().addKeyListener(km);
         Tiles.init();
@@ -48,6 +49,8 @@ public class GameEngine implements Runnable {
         Portals.init();
         Levels.changeLevel(0);
         frameImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        display.getCanvas().setVisible(false);
+        display.getMenu().setVisible(true);
     }
 
     private void update() {
@@ -93,12 +96,14 @@ public class GameEngine implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            now = System.nanoTime();
-            diff = now - lastTime;
-            if (diff > TIMEPERTICK) {
-                lastTime = System.nanoTime();
-                update();
-                render();
+            if (!paused) {
+                now = System.nanoTime();
+                diff = now - lastTime;
+                if (diff > TIMEPERTICK) {
+                    lastTime = System.nanoTime();
+                    update();
+                    render();
+                }
             }
         }
         stop();
@@ -123,4 +128,8 @@ public class GameEngine implements Runnable {
         }
     }
 
+
+    public void pause(boolean b) {
+        paused = b;
+    }
 }

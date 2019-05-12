@@ -1,4 +1,4 @@
-package main.display;
+package main.graphics;
 
 import main.GameEngine;
 

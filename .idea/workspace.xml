@@ -9,16 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/entities/Portal.java" line="18" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy">
-      <change afterPath="$PROJECT_DIR$/src/main/graphics/GameMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/GameEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/graplatformowa/main/graphics/Display.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/graplatformowa/main/graphics/Display.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/display/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphics/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/display/Hud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphics/Hud.java" afterDir="false" />
-    </list>
+    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,11 +57,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/graphics/GameMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+            <state relative-caret-position="231">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/graphics/MyButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -112,21 +114,6 @@
               <caret line="38" column="31" selection-start-line="29" selection-start-column="8" selection-end-line="38" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Tile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/main/graphics/Menu.java" />
         <option value="$PROJECT_DIR$/src/main/graphics/Display.java" />
         <option value="$PROJECT_DIR$/src/main/GameEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/graphics/MyButton.java" />
         <option value="$PROJECT_DIR$/src/main/graphics/GameMenu.java" />
       </list>
     </option>
@@ -339,7 +327,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="742" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -349,11 +336,11 @@
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1918429" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.22647528" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.22647528" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.22807017" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.22807017" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -671,12 +658,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/graphics/MyButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/graphics/GameMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        <state relative-caret-position="231">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
           </folding>
         </state>
       </provider>

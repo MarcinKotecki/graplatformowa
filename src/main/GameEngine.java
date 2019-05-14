@@ -43,7 +43,7 @@ public class GameEngine implements Runnable {
         Tiles.init();
         GameMaps.init();
         Levels.init();
-        player = new Player(getDifficultyReturnHp(difficulty));
+        player = new Player(difficulty);
         Creatures.init();
         Projectiles.init();
         Hud.init(display);
@@ -52,19 +52,6 @@ public class GameEngine implements Runnable {
         frameImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         display.getCanvas().setVisible(false);
         display.getMenu().setVisible(true);
-    }
-
-    private int getDifficultyReturnHp(int difficulty) {
-        int Hp;
-        if (difficulty == 0)
-            Hp = 800;
-        else if (difficulty == 1)
-            Hp = 400;
-        else if (difficulty == 2)
-            Hp = 200;
-        else
-            Hp = 100;
-        return Hp;
     }
 
     private void update() {

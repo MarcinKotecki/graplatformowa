@@ -11,15 +11,28 @@ public class Player extends Entity {
     private int hp, maxHp, maxMana;
     private double mana;
 
-    public Player(int mH) {
-        this.maxHp = mH;
+    public Player(int d) {
+        this.maxHp = getDifficultyReturnHp(d);
         this.maxMana = 200;
         this.mana = maxMana;
-        this.hp = mH;
+        this.hp = getDifficultyReturnHp(d);
         this.range = 250;
         setX(0);
         setY(0);
         setTexture(ResourceLoader.loadImage("/textures/mage.png"));
+    }
+
+    private int getDifficultyReturnHp(int difficulty) {
+        int Hp;
+        if (difficulty == 0)
+            Hp = 800;
+        else if (difficulty == 1)
+            Hp = 400;
+        else if (difficulty == 2)
+            Hp = 200;
+        else
+            Hp = 100;
+        return Hp;
     }
 
     public void reset(int x, int y) {

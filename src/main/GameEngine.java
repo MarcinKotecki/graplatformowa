@@ -22,17 +22,18 @@ public class GameEngine implements Runnable {
     private Graphics g;
     private BufferedImage frameImg;
 
-    public static int width, height, scale;
+    public static int width, height, scale, difficulty;
     public static KeyManager km;
 
     public static Level currentLevel;
     public static GameMap currentMap;
     public static Player player;
 
-    public GameEngine(int w, int h, int s) {
+    public GameEngine(int w, int h, int s, int d) {
         width = w;
         height = h;
         scale = s;
+        difficulty = d;
     }
 
     private void init() {
@@ -42,7 +43,7 @@ public class GameEngine implements Runnable {
         Tiles.init();
         GameMaps.init();
         Levels.init();
-        player = new Player();
+        player = new Player(getDifficultyReturnHp(difficulty));
         Creatures.init();
         Projectiles.init();
         Hud.init(display);
@@ -51,6 +52,19 @@ public class GameEngine implements Runnable {
         frameImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         display.getCanvas().setVisible(false);
         display.getMenu().setVisible(true);
+    }
+
+    private int getDifficultyReturnHp(int difficulty) {
+        int Hp;
+        if (difficulty == 0)
+            Hp = 800;
+        else if (difficulty == 1)
+            Hp = 400;
+        else if (difficulty == 2)
+            Hp = 200;
+        else
+            Hp = 100;
+        return Hp;
     }
 
     private void update() {

@@ -11,11 +11,11 @@ public class Player extends Entity {
     private int hp, maxHp, maxMana;
     private double mana;
 
-    public Player() {
-        this.maxHp = 1000;
+    public Player(int mH) {
+        this.maxHp = mH;
         this.maxMana = 200;
         this.mana = maxMana;
-        this.hp = maxHp;
+        this.hp = mH;
         this.range = 250;
         setX(0);
         setY(0);
@@ -112,4 +112,3 @@ public class Player extends Entity {
         return maxMana;
     }
 }
-

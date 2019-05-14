@@ -1,16 +1,19 @@
 package main.graphics;
 
 import main.GameEngine;
+import main.resources.ResourceLoader;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
 public class GameMenu extends JPanel {
 
     private MyButton start;
     private MyButton exit;
+    private BufferedImage bg;
 
     public GameMenu(int w, int h, GameEngine ge, Display d) {
         setLayout(null);
@@ -32,7 +35,14 @@ public class GameMenu extends JPanel {
         });
         add(start);
         add(exit);
-        setBackground(new Color(80, 40, 40));
+        bg = ResourceLoader.loadImage("/menuBg.png");
+        //setBackground(new Color(80, 40, 40));
+    }
+
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        // paint the background image and scale it to fill the entire space
+        g.drawImage(bg, 0, 0, getWidth(), getHeight(), this);
     }
 
 }

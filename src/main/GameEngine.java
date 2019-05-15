@@ -34,10 +34,16 @@ public class GameEngine implements Runnable {
         height = h;
         scale = s;
         difficulty = d;
+        initWindow();
     }
 
-    private void init() {
+    private void initWindow() {
         display = new Display(width, height, this);
+        display.getCanvas().setVisible(false);
+        display.getMenu().setVisible(true);
+    }
+
+    public void init() {
         km = new KeyManager();
         display.getFrame().addKeyListener(km);
         Tiles.init();
@@ -50,8 +56,6 @@ public class GameEngine implements Runnable {
         Portals.init();
         Levels.changeLevel(0);
         frameImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        display.getCanvas().setVisible(false);
-        display.getMenu().setVisible(true);
     }
 
     private void update() {
@@ -129,8 +133,16 @@ public class GameEngine implements Runnable {
         }
     }
 
-
     public void pause(boolean b) {
         paused = b;
     }
+
+    public void setDifficulty(int i) {
+        difficulty = i;
+    }
+
+    public static int getDifficulty() {
+        return difficulty;
+    }
+
 }

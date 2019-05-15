@@ -31,7 +31,7 @@ public class Player extends Entity {
         else if (difficulty == 2)
             Hp = 200;
         else
-            Hp = 100;
+            Hp = 1;
         return Hp;
     }
 

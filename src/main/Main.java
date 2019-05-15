@@ -15,8 +15,8 @@ public class Main {
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         int width = gd.getDisplayMode().getWidth();
         int height = gd.getDisplayMode().getHeight();
-        int scalew = (width - 20) / WINDOW_WIDTH;
-        int scaleh = (height - 60) / WINDOW_HEIGHT;
+        int scalew = (width - 40) / WINDOW_WIDTH;
+        int scaleh = (height - 120) / WINDOW_HEIGHT;
         int scale = Math.min(scalew, scaleh);
 
         GameEngine game;
@@ -29,7 +29,6 @@ public class Main {
         } else {
             game = new GameEngine(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
         }
-        game.start();
 
     }
 

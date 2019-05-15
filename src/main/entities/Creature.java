@@ -22,7 +22,7 @@ public class Creature extends Entity {
         this.hp = hp;
         this.range = range;
         this.projectileId = projectileId;
-        this.shootingCooldown = shootingCooldown;
+        this.shootingCooldown = Math.max(1, (int) (shootingCooldown * (1 - 0.13 * GameEngine.difficulty)));
         setX(x1);
         setTexture(ResourceLoader.loadImage(path));
         this.portalId = -111;
@@ -34,7 +34,7 @@ public class Creature extends Entity {
         this.hp = hp;
         this.range = range;
         this.projectileId = projectileId;
-        this.shootingCooldown = shootingCooldown;
+        this.shootingCooldown = Math.max(1, (int) (shootingCooldown * (1 - 0.13 * GameEngine.difficulty)));
         setX(x1);
         setTexture(ResourceLoader.loadImage(path));
         this.portalId = portalId;
@@ -79,7 +79,7 @@ public class Creature extends Entity {
         }
         setX(getX() + vx);
         setY(getY() + vy);
-        if (shootingTimer <= 0 && Math.abs((getX() + getTexture().getWidth() / 2) - (GameEngine.player.getX() + GameEngine.player.getTexture().getWidth() / 2 )) <= range) {
+        if (shootingTimer <= 0 && Math.abs((getX() + getTexture().getWidth() / 2) - (GameEngine.player.getX() + GameEngine.player.getTexture().getWidth() / 2)) <= range) {
             shootingTimer += shootingCooldown;
             double yy = GameEngine.player.getY() + GameEngine.player.getTexture().getHeight() / 2 - Projectiles.getProjectileFromList(projectileId).getTexture().getHeight() / 2;
             if (yy > getY() + getTexture().getHeight() - 1 - (1 + Projectiles.getProjectileFromList(projectileId).getTexture().getHeight()) / 2)
@@ -95,7 +95,7 @@ public class Creature extends Entity {
         if (shootingTimer > 0)
             shootingTimer--;
         if (hp <= 0) {
-            if( portalId >= 0)
+            if (portalId >= 0)
                 Portals.spawn(portalId);
             Creatures.removeCreature(this);
         }

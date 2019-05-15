@@ -9,13 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/entities/Portal.java" line="18" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/graplatformowa.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/graplatformowa.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/fireball-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/fireball-blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Projectile.java" afterDir="false" />
-    </list>
+    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/entities/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+            <state relative-caret-position="223">
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2965#2966#0" expanded="true" />
@@ -366,7 +360,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="742" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -376,11 +369,11 @@
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2205438" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.54545456" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.54545456" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.22488038" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.22488038" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -709,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/entities/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        <state relative-caret-position="223">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2965#2966#0" expanded="true" />

@@ -9,12 +9,27 @@ public class Portal extends Entity{
     private int id;
     private int nextLevel;
 
-    public Portal(int id, int x, int y, int nextLevel, String path) {
+    public Portal(int id, int x, int y, int nextLevel, String path,boolean animated) {
         this.id = id;
         setX((double)x);
         setY((double)y);
         this.nextLevel = nextLevel;
+        setAnimated(animated);
         setTexture(ResourceLoader.loadImage(path));
+        if (animated) {
+            boolean loop = true;
+            int i = 1;
+            String fileName = path.substring(0, path.lastIndexOf('.'));
+            try {
+                while (loop) {
+                    String fileName2 = fileName + i + ".png";
+                    addAnimationFrame(ResourceLoader.loadImage(fileName2));
+                    i++;
+                }
+            } catch (IllegalArgumentException e) {
+                loop = false;
+            }
+        }
     }
 
     public Portal(int id) {
@@ -23,6 +38,9 @@ public class Portal extends Entity{
         setX(Portals.getFromList(id).getX());
         setY(Portals.getFromList(id).getY());
         setTexture(Portals.getFromList(id).getTexture());
+        setAnimated(Portals.getFromList(id).isAnimated());
+        if (isAnimated())
+            setAnimationFrames(Portals.getFromList(id).getAnimationFrames());
     }
 
     private int getNextLevel() {

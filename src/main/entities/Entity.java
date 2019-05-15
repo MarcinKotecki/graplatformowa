@@ -13,7 +13,7 @@ public class Entity {
     private boolean animation = false;
     private ArrayList<BufferedImage> animations;
     private int animationTimer;
-    private int frameTime = 8;
+    private int frameTime = 15;
 
     public void draw(BufferedImage frameImg) {
         try {

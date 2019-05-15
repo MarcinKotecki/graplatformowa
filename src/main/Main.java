@@ -6,7 +6,6 @@ public class Main {
 
     private static final int WINDOW_WIDTH = 384;
     private static final int WINDOW_HEIGHT = 240;
-
     //0-EASY, 1-MEDIUM, 2-HARD, 3-VERY HARD
     private static final int DIFFICULTY_LEVEL = 0;
 

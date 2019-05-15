@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 public class Entity {
 
     private BufferedImage texture;
+    private boolean glow = false;
     private double x, y;
 
     public void draw(BufferedImage frameImg) {
@@ -58,7 +59,7 @@ public class Entity {
         this.texture = texture;
     }
 
-    BufferedImage getTexture() {
+    public BufferedImage getTexture() {
         return texture;
     }
 
@@ -66,7 +67,7 @@ public class Entity {
         return x;
     }
 
-    double getY() {
+    public double getY() {
         return y;
     }
 
@@ -76,6 +77,14 @@ public class Entity {
 
     void setY(double y) {
         this.y = y;
+    }
+
+    public void setGlow(boolean glow) {
+        this.glow = glow;
+    }
+
+    public boolean getGlow() {
+        return glow;
     }
 
 }

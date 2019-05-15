@@ -10,12 +10,13 @@ public class Projectile extends Entity {
 	private int damage = 50;
 	private int type = 1; // 0 - ignores player, 1 - ignores creatures
 
-	Projectile(int id, int type, int damage, double vx, String path) {
+	Projectile(int id, int type, int damage, double vx, String path,boolean glow) {
 		this.id = id;
 		this.type = type;
 		this.vx = vx;
 		this.damage = damage;
 		setTexture(ResourceLoader.loadImage(path));
+		setGlow(glow);
 	}
 
 	Projectile(int id, double range) {
@@ -25,6 +26,7 @@ public class Projectile extends Entity {
 		this.range = range;
 		this.damage = Projectiles.getProjectileFromList(id).getDamage();
 		setTexture(Projectiles.getProjectileFromList(id).getTexture());
+		setGlow(Projectiles.getProjectileFromList(id).getGlow());
 	}
 
 	void update() {
@@ -84,7 +86,7 @@ public class Projectile extends Entity {
 		return damage;
 	}
 
-	int getType() {
+	public int getType() {
 		return type;
 	}
 }

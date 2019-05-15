@@ -14,9 +14,9 @@ public class Projectiles {
         projectilesList = new ArrayList<>();
         projectiles = new ArrayList<>();
         projectilesToRemove = new ArrayList<>();
-        projectilesList.add(new Projectile(0, 0, 50, 2.5, "/textures/fireball.png"));
-        projectilesList.add(new Projectile(1, 1, 50, 2.5, "/textures/fireball-blue.png"));
-        projectilesList.add(new Projectile(2, 1, 1, 2, "/textures/spikes-p.png"));
+        projectilesList.add(new Projectile(0, 0, 50, 2.5, "/textures/fireball.png", true));
+        projectilesList.add(new Projectile(1, 1, 50, 2.5, "/textures/fireball-blue.png",true));
+        projectilesList.add(new Projectile(2, 1, 1, 2, "/textures/spikes-p.png",false));
     }
 
     public static void update() {

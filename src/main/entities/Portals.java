@@ -14,7 +14,7 @@ public class Portals {
         portalsList = new ArrayList<>();
         portals = new ArrayList<>();
         portalsToRemove = new ArrayList<>();
-        portalsList.add(new Portal(0, 480, 100, 1, "/textures/portal.png", true));
+        portalsList.add(new Portal(0, 560, 100, 1, "/textures/portal.png", true));
     }
 
     public static void update() {

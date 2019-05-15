@@ -3,16 +3,33 @@ package main.entities;
 import main.Drawing;
 import main.GameEngine;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class Entity {
 
     private BufferedImage texture;
     private double x, y;
+    private boolean animation = false;
+    private ArrayList<BufferedImage> animations;
+    private int animationTimer;
+    private int frameTime = 8;
 
     public void draw(BufferedImage frameImg) {
-        Drawing.drawImage(texture, frameImg, (int) x - GameEngine.currentMap.getOffsetX(), (int) y);
+        try {
+            if (!animation) {
+                Drawing.drawImage(texture, frameImg, (int) x - GameEngine.currentMap.getOffsetX(), (int) y);
+            } else {
+                int itemId = animationTimer / frameTime;
+                Drawing.drawImage(animations.get(itemId), frameImg, (int) x - GameEngine.currentMap.getOffsetX(), (int) y);
+                animationTimer++;
+                if (animationTimer >= animations.size() * frameTime - 1) {
+                    animationTimer = 0;
+                }
+            }
+        }catch(NullPointerException e) {
+            e.printStackTrace();
+        }
     }
 
     // 0 - góra, 1 - prawo, 2 - dół, 3 - lewo
@@ -78,5 +95,34 @@ public class Entity {
         this.y = y;
     }
 
+    public void setAnimated(boolean b) {
+        this.animation = b;
+    }
+
+    public boolean isAnimated() {
+        return animation;
+    }
+
+    public void addAnimationFrame(BufferedImage img) {
+        if (animations == null)
+            animations = new ArrayList<>();
+        animations.add(img);
+    }
+
+    public ArrayList<BufferedImage> getAnimationFrames() {
+        return animations;
+    }
+
+    public void setAnimationFrames(ArrayList<BufferedImage> af) {
+        this.animations = af;
+    }
+
+    public int getAnimationTimer() {
+        return animationTimer;
+    }
+
+    public void setAnimationTimer(int i) {
+        animationTimer = i;
+    }
 }
 

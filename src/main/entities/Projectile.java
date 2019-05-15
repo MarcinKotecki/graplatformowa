@@ -16,7 +16,6 @@ public class Projectile extends Entity {
 		this.vx = vx;
 		this.damage = damage;
 		setTexture(ResourceLoader.loadImage(path));
-		setGlow(glow);
 	}
 
 	Projectile(int id, double range) {
@@ -26,7 +25,6 @@ public class Projectile extends Entity {
 		this.range = range;
 		this.damage = Projectiles.getProjectileFromList(id).getDamage();
 		setTexture(Projectiles.getProjectileFromList(id).getTexture());
-		setGlow(Projectiles.getProjectileFromList(id).getGlow());
 	}
 
 	void update() {

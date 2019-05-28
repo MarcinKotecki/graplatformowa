@@ -12,10 +12,10 @@ public class PlayerTest {
     @Test
     public void testReset() throws Exception {
         Player testPlayerReset = new Player(0);
-        testPlayer.reset(1138, 327);
+        testPlayerReset.reset(1138, 327);
 
-        Assert.assertEquals(1138, testPlayerReset.getX());
-        Assert.assertEquals(327, testPlayerReset.getY());
+        Assert.assertEquals(1138, (int) testPlayerReset.getX());
+        Assert.assertEquals(327, (int) testPlayerReset.getY());
     }
 
     @Test

@@ -14,6 +14,6 @@ public class PortalsTest {
         Assert.assertEquals(Portals.portal(0).getId(), 0);
         Assert.assertEquals(Portals.getFromList(id).getX(), 560);
         Assert.assertEquals(Portals.getFromList(id).isAnimated(), 1);
-        assertNull(Portals.portal(2));
+        Assert.assertNull(Portals.portal(2));
 
     }

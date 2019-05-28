@@ -105,11 +105,11 @@ public class Creature extends Entity {
         return id;
     }
 
-    private double getX1() {
+    double getX1() {
         return x1;
     }
 
-    private double getX2() {
+    double getX2() {
         return x2;
     }
 
@@ -125,7 +125,7 @@ public class Creature extends Entity {
         return vx;
     }
 
-    private int getProjectileId() {
+    int getProjectileId() {
         return projectileId;
     }
 
@@ -133,7 +133,7 @@ public class Creature extends Entity {
         return shootingCooldown;
     }
 
-    private int getRange() {
+    int getRange() {
         return range;
     }
 }

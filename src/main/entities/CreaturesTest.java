@@ -15,7 +15,7 @@ public class CreaturesTest {
         Assert.assertEquals(Creatures.getCreatureFromList(0).getHp(), 100);
         Assert.assertEquals(Creatures.getCreatureFromList(1).getProjectileId(), 1);
         Assert.assertEquals(Creatures.getCreatureFromList(2).getRange(), 12);
-        Assert.assertEquals(Creatures.getCreatureFromList(3), null);
+        Assert.assertNull(Creatures.getCreatureFromList(3));
 
     }
 

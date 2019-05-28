@@ -9,10 +9,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/entities/Portal.java" line="33" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="Poprawki, mapa się przewija, są przeciwnicy">
-      <change afterPath="$PROJECT_DIR$/src/main/entities/PlayerTest.java" afterDir="false" />
+    <list default="true" id="a6413e59-5a0f-48f9-b401-11b1443978d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/entities/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entities/PlayerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/entities/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding>
                 <element signature="method#testReset#0;class#PlayerTest#0" />
                 <element signature="method#testSetHp#0;class#PlayerTest#0" />
@@ -161,7 +160,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559037320824" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559037504355" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554138482830</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test dla klasy Player">
+      <created>1559037384495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559037384495</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -308,7 +314,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Klasa Entity" />
     <MESSAGE value="Poprawki, mapa się przewija, są przeciwnicy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Poprawki, mapa się przewija, są przeciwnicy" />
+    <MESSAGE value="Test dla klasy Player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test dla klasy Player" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -596,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/entities/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
             <element signature="method#testReset#0;class#PlayerTest#0" />
             <element signature="method#testSetHp#0;class#PlayerTest#0" />

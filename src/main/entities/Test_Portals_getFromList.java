@@ -1,4 +1,4 @@
-ackage main.entities;
+package main.entities;
 
 
 import org.junit.Assert;

@@ -11,24 +11,25 @@ public class PlayerTest {
 
     @Test
     public void testReset() throws Exception {
-        Player testPlayer = Player.reset(10, 10);
+        Player testPlayerReset = new Player(0);
+        testPlayer.reset(1138, 327);
 
-        Assert.assertEquals(Player.getX(), testPlayer.getX());
-        Assert.assertEquals(Player.getY(), testPlayer.getY());
+        Assert.assertEquals(1138, testPlayerReset.getX());
+        Assert.assertEquals(327, testPlayerReset.getY());
     }
 
     @Test
     public void testCheckDifficulty() throws Exception {
-        Player testPlayer = Player.checkDifficulty(0);
-        Assert.assertEquals(Player.getMaxHp(), testPlayer.getMaxHp());
+        Player testPlayerMaxHp = new Player(0);
+        Assert.assertEquals(800, testPlayerMaxHp.getMaxHp());
 
-        testPlayer = Player.checkDifficulty(1);
-        Assert.assertEquals(Player.getMaxHp(), testPlayer.getMaxHp());
+        testPlayerMaxHp = new Player(1);
+        Assert.assertEquals(400, testPlayerMaxHp.getMaxHp());
 
-        testPlayer = Player.checkDifficulty(2);
-        Assert.assertEquals(Player.getMaxHp(), testPlayer.getMaxHp());
+        testPlayerMaxHp = new Player(2);
+        Assert.assertEquals(200, testPlayerMaxHp.getMaxHp());
 
-        testPlayer = Player.checkDifficulty(3);
-        Assert.assertEquals(Player.getMaxHp(), testPlayer.getMaxHp());
+        testPlayerMaxHp = new Player(3);
+        Assert.assertEquals(1, testPlayerMaxHp.getMaxHp());
     }
 }

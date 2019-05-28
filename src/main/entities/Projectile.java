@@ -89,7 +89,7 @@ public class Projectile extends Entity {
         return id;
     }
 
-    private double getRange() {
+    public double getRange() {
         return range;
     }
 
@@ -101,7 +101,7 @@ public class Projectile extends Entity {
         this.vx = vx;
     }
 
-    private int getDamage() {
+    public int getDamage() {
         return damage;
     }
 

@@ -1,0 +1,38 @@
+package main.entities;
+
+
+import org.junit.Assert;
+import org.junit.Test;
+public class PortalsTest {
+
+    @Test
+    public void test_poratls_Init() {
+
+        Portals portal = new Portals();
+        portal.init();
+
+        Assert.assertEquals(Portals.portal(0).getId(), 0);
+        Assert.assertEquals(Portals.getFromList(id).getX(), 560);
+        Assert.assertEquals(Portals.getFromList(id).isAnimated(), 1);
+        Assert.assertEquals(Portals.portal(2), null);
+
+    }
+
+    @Test
+    public void testNewCreature() {
+
+        Creatures c = new Creatures();
+        c.init();
+
+        int[] t = {1, 2, 3, 4};
+
+        Creatures.newCreature(t);
+
+        Assert.assertEquals(Creatures.creatures.size(), 1);
+        Assert.assertEquals(Creatures.creatures.get(0).getId(), 1);
+        Assert.assertEquals((int) Creatures.creatures.get(0).getX1(), 2);
+        Assert.assertEquals((int) Creatures.creatures.get(0).getX2(), 3);
+        Assert.assertEquals((int) Creatures.creatures.get(0).getX(), 2);
+        Assert.assertEquals((int) Creatures.creatures.get(0).getY(), 4);
+
+}

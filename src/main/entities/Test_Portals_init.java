@@ -9,7 +9,7 @@ public class PortalsTest {
     public void test_poratls_Init() {
 
         Portals portal = new Portals();
-        portal.init();
+        Portals.init();
 
         Assert.assertEquals(Portals.portal(0).getId(), 0);
         Assert.assertEquals(Portals.getFromList(id).getX(), 560);

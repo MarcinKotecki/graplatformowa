@@ -7,15 +7,17 @@ import org.junit.Test;
 public class PortalsTest {
 
     @Test
-    Portals portal = new Portals();
-    portals.init();    
-    Assert.assertEquals(Portals.getFromList(0), portal);
-    Assert.assertNull(Portals.getFromList(2));
-    
-    
-    
-    
-    
+    public void test_poratls_Init() {
+
+        Portals portal = new Portals();
+        Portals.init();
+
+        Assert.assertEquals(Portals.getFromList(0), portal);
+        Assert.assertNull(Portals.getFromList(2));
+
+
     }
+    }
+
 
 

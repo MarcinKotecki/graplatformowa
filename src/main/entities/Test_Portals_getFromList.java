@@ -8,9 +8,9 @@ public class PortalsTest {
 
     @Test
     Portals portal = new Portals();
-    portal.init();    
-    Assert.assertEquals(Portal.getFromList(0), portal);
-    Assert.assertNull(Portal.getFromList(2));
+    portals.init();    
+    Assert.assertEquals(Portals.getFromList(0), portal);
+    Assert.assertNull(Portals.getFromList(2));
     
     
     
